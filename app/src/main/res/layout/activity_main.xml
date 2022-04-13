@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/costoServicio"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/costo_del_servicio"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/pregunta_servicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/como_estuvo_el_servicio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costoServicio" />
+
+    <RadioGroup
+        android:id="@+id/opciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/opcion_veinte_por_ciento"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta_servicio">
+
+        <RadioButton
+            android:id="@+id/opcion_veinte_por_ciento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/asombroso_20" />
+
+        <RadioButton
+            android:id="@+id/opcion_dieciocho_por_ciento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bueno_18" />
+
+        <RadioButton
+            android:id="@+id/opcion_quince_por_ciento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aceptable_15" />
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/switch_redondear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:minHeight="48dp"
+        android:text="@string/redondear_propina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opciones"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_redondear" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/propina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcular" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
