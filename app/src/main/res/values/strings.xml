@@ -7,5 +7,6 @@
     <string name="costo_del_servicio">Costo del servicio</string>
     <string name="redondear_propina">Redondear propina?</string>
     <string name="calcular">Calcular</string>
-    <string name="propina">Propina: 0.00</string>
+    <!--Esta cosita para reemplazar decimales %s dentro de un textview-->
+    <string name="propina">Propina: %s</string>
 </resources>
